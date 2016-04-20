@@ -9,13 +9,15 @@
 title: My brain dump site
 email: johntskarbek@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  I'm an Infrastructure Engineer at CA Technologies in the Agile Business Unit.
+  Im an Infrastructure Engineer at CA Technologies in the Agile Business Unit.
   Reading and using the latest and greatest of technology is what I want to be doing.
   Blogging is not something I do on any regular basis (and it shows).
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://jtslear.github.io" # the base hostname & protocol for your site
-twitter_username: djscribblinni
+twitter_username: johntskarbek
 github_username:  jtslear
 
 # Build settings
 markdown: kramdown
+
+exclude: [vendor]
