@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: List Active Directory Group Members
 date: 2012-12-19 01:14:57.000000000 -07:00
 type: post

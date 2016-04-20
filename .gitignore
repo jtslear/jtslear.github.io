@@ -1,3 +1,7 @@
-_site
-.sass-cache
+.DS_Store
 .jekyll-metadata
+.sass-cache
+Gemfile.lock
+_site
+codekit-config.json
+node_modules

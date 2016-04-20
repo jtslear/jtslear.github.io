@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: The List of Goals for 2009
 date: 2009-03-03 18:36:40.000000000 -07:00
 type: post

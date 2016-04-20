@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Cygwin Useful?
 date: 2011-02-20 19:59:44.000000000 -07:00
 type: post

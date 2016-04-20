@@ -6,7 +6,7 @@ require 'rubocop/rake_task'
 require 'uri'
 
 # Configuration Options
-config_file = '_config_dev.yml' # Name of Jekyll config file
+config_file = '_config.yml' # Name of Jekyll config file
 
 # Do not touch below this line
 RuboCop::RakeTask.new
@@ -35,8 +35,12 @@ task :html_proofer do
   Rake::Task['build'].invoke
   host_regex = Regexp.new(site_domain(config_file))
   puts 'Running html proofer...'.yellow.bold
-  HTMLProofer.check_directory('./_site', allow_hash_href: true,
-                                         url_ignore: [host_regex]).run
+  HTMLProofer.check_directory(
+    './_site',
+    allow_hash_href: true,
+    url_ignore: [host_regex],
+    file_ignore: ['^vendor/.*']
+  ).run
 end
 
 # Misc Methods

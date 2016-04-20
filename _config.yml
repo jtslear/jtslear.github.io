@@ -1,11 +1,3 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
 title: My brain dump site
 email: johntskarbek@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
@@ -17,7 +9,59 @@ url: "http://jtslear.github.io" # the base hostname & protocol for your site
 twitter_username: johntskarbek
 github_username:  jtslear
 
-# Build settings
-markdown: kramdown
+reading_time:     true
+words_per_minute: 200
 
-exclude: [vendor]
+menu:
+  - title: 'Home'
+    url: '/'
+  - title: 'Github'
+    url: 'http://github.com/jtslear'
+  - title: 'About'
+    url: '/about/'
+  - title: 'Tags'
+    url: '/tags'
+  - title: 'Categories'
+    url: '/categories'
+    type: 'categories'
+
+owner:
+  name:           John T Skarbek
+  site:           http://jtslear.github.io
+  avatar:         images/avatar.jpg
+  bio: >
+    Im an Infrastructure Engineer at CA Technologies in the Agile Business Unit.
+    Reading and using the latest and greatest of technology is what I want to be doing.
+    Blogging is not something I do on any regular basis (and it shows).
+  email:          johntskarbek@gmail.com
+locale:      en_US
+future:      true
+sass:
+  sass_dir: _sass
+  style: compressed
+
+kramdown:
+  input: GFM
+
+permalink:   /:categories/:title/
+
+paginate: 5
+
+titlecase: true
+
+exclude: [
+  "Gemfile",
+  "Gemfile.lock",
+  "Gruntfile.js",
+  "LICENSE",
+  "README.md",
+  "Rakefile",
+  "less",
+  "lib",
+  "log",
+  "node_modules",
+  "package.json",
+]
+
+gems:
+  - jekyll-paginate

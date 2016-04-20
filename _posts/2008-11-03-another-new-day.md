@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Another New Day
 date: 2008-11-03 20:20:45.000000000 -07:00
 type: post

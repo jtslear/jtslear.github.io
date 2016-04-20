@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Another Redo
 date: 2009-03-01 18:52:40.000000000 -07:00
 type: post

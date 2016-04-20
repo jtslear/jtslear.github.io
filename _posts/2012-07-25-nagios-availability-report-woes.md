@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Nagios Availability Report Woes
 date: 2012-07-25 01:12:48.000000000 -06:00
 type: post
@@ -7,7 +7,6 @@ published: true
 status: publish
 categories: []
 tags:
-- linkedin
 - nagios
 ---
 I've recently been tasked with providing reports on a regular basis that show the status of our servers and services that we monitor using nagios. We've devoted a rather large amount of time to providing nagios with many checks and graphing of as much data as possible, and making custom plugin's wherever we see fit. Nagios has been fantastic thus far with it's flexibility and ease to customize.  Though daughnting for the new commer, nagios has proven to be a very valid candidate for enterprise worthy monitoring.  That is, until I discovered an interesting problem that I cannot find a resolution to.

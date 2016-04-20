@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: tmux compile failure
 date: 2013-03-22 18:22:43.000000000 -06:00
 type: post

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: ERB Creating Templates with ASP pages
 date: 2012-09-19 11:23:54.000000000 -06:00
 type: post

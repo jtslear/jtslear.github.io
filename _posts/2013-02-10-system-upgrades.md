@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: System Upgrades
 date: 2013-02-10 23:44:14.000000000 -07:00
 type: post

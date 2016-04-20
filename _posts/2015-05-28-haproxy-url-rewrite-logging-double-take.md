@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Haproxy URL Rewrite Logging Double Take
 date: 2015-05-28 22:45:32.000000000 -06:00
 type: post

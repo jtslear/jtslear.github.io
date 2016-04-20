@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Importance of Communication
 date: 2013-04-30 16:00:50.000000000 -06:00
 type: post

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Clean a virtual box server
 date: 2015-03-06 09:38:53.000000000 -07:00
 type: post

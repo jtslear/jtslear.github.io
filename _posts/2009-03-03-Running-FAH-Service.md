@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Running Folding@Home as a Service
 date: 2009-03-03 18:31:55.000000000 -07:00
 type: post

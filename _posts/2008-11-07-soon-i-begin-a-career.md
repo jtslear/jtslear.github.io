@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Soon I Begin a Career
 date: 2008-11-07 20:13:37.000000000 -07:00
 type: post

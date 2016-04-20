@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: VMware vSphere CLI 5.1 Install Failure
 date: 2013-06-27 14:10:56.000000000 -06:00
 type: post

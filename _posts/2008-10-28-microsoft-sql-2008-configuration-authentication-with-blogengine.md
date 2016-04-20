@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Microsoft SQL 2008 configuration authentication with BlogEngine
 date: 2008-10-28 20:23:45.000000000 -06:00
 type: post

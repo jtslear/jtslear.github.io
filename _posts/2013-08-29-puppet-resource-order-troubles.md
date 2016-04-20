@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Puppet Resource Order Troubles
 date: 2013-08-29 20:58:57.000000000 -06:00
 type: post

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Saving a blog with php Functions in aTheme
 date: 2008-11-23 19:38:41.000000000 -07:00
 type: post

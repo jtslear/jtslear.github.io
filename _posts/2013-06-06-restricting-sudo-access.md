@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Restricting Sudo Access
 date: 2013-06-06 21:45:42.000000000 -06:00
 type: post
@@ -7,7 +7,6 @@ published: true
 status: publish
 categories: []
 tags:
-- linkedin
 - linux
 - visudo
 ---

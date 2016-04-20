@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Connectivity Woes
 date: 2008-12-11 19:32:48.000000000 -07:00
 type: post

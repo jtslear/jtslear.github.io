@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Announcement LOPSA Baltimore Chapter July 3, 2013 Meeting
 date: 2013-06-24 11:21:25.000000000 -06:00
 type: post
@@ -7,7 +7,6 @@ published: true
 status: publish
 categories: []
 tags:
-- linkedin
 - LOPSA
 ---
 July’s presentation is courtesy of our very own John Skarbek. John will giving an exciting talk on what he has learned since he started using Vagrant.

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: mysql Remote Access
 date: 2013-06-10 15:28:25.000000000 -06:00
 type: post

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Zimbra zmconfigd not starting/running
 date: 2012-12-05 01:01:04.000000000 -07:00
 type: post

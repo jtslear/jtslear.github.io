@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Sudoers Rediculous Syntax
 date: 2014-02-07 19:54:44.000000000 -07:00
 type: post

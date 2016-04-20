@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Compute Node Facility Concept
 date: 2012-09-21 10:50:18.000000000 -06:00
 type: post

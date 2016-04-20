@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: dark-post
 title: Testing Puppet
 date: 2013-04-23 07:27:58.000000000 -06:00
 type: post
