@@ -1,0 +1,85 @@
+---
+layout: post
+title: VMware vSphere CLI 5.1 Install Failure
+date: 2013-06-27 14:10:56.000000000 -06:00
+type: post
+published: true
+status: publish
+categories: []
+tags:
+- linkedin
+- vmware-cli
+meta:
+  _oembed_5b11a14b993d9a70f082222743490c62: "{{unknown}}"
+  _edit_last: '19750133'
+  _wpas_skip_1386473: '1'
+  _wpas_done_1386473: '1'
+  _publicize_done_external: a:1:{s:8:"linkedin";a:1:{s:10:"Wf9JSr6aRc";b:1;}}
+  _oembed_df8682c1f0695b73b1381e5ce0ff4169: "{{unknown}}"
+author:
+  login: jskarbek
+  email: jtslear@gmail.com
+  display_name: jskarbek
+  first_name: ''
+  last_name: ''
+---
+<p><em>See the update below regarding an RHEL system...</em></p>
+<p>Yet again, I'm speaking about something that I had fail to install on my workstation.    The error message:</p>
+<pre>http_proxy not set. please set environment variable 'http_proxy' e.g. export
+http_proxy=http://myproxy.mydomain.com:0000 .
+ftp_proxy not set. please set environment variable 'ftp_proxy' e.g. export
+ftp_proxy=http://myproxy.mydomain.com:0000 .</pre>
+<p>Unfortunately I do not run a proxy in my environment. I'm not sure why they don't make this easier it insists on this, but it fails out. To fix this I did this:</p>
+<pre>export http_proxy=1
+export ftp_proxy=1</pre>
+<p>(This works cuz I've looked at the source, where they have a bunch of if statements that look to ensure this is set.)</p>
+<p>After more issues, I discovered I needed more dependencies in order to get this installed. Here's the list overall:</p>
+<ul>
+<li>libssl-dev</li>
+<li>perl-doc</li>
+<li>libxml-libxml-perl</li>
+<li>uuid-dev</li>
+</ul>
+<p>I, however, did have to install a package using cpan cuz the installer failed, however if you run through the above dependencies first, you should be okay. Regardless of struggling with this, I still had issues:</p>
+<pre>The following Perl modules were found on the system but may be too old to work
+with vSphere CLI:
+
+Compress::Zlib 2.037 or newer
+Compress::Raw::Zlib 2.037 or newer
+IO::Compress::Base 2.037 or newer
+IO::Compress::Zlib::Constants 2.037 or newer</pre>
+<p>But vmware-cmd appears to work ok.<br />
+This was accomplished using the latest version of vmware-cli and ubuntu at the time of this writing.</p>
+<p>UPDATE:</p>
+<p>On my Centos 6.3 system, I ran into the following issue:</p>
+<pre>cpan[1]&gt; install UUID
+&lt;snip&gt;
+CPAN.pm: Building L/LZ/LZAP/UUID-0.05.tar.gz
+
+Checking if your kit is complete...
+Looks good
+Writing Makefile for UUID
+Writing MYMETA.yml and MYMETA.json
+cp UUID.pm blib/lib/UUID.pm
+/usr/bin/perl /usr/share/perl5/ExtUtils/xsubpp -typemap /usr/share/perl5/ExtUtils/typemap UUID.xs &gt; UUID.xsc &amp;&amp; mv UUID.xsc UUID.c
+gcc -c -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pipe -fstack-protector -I/usr/local/include -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexcepti
+ons -fstack-protector --param=ssp-buffer-size=4 -m64 -mtune=generic -DVERSION=\"0.05\" -DXS_VERSION=\"0.05\" -fPIC "-I/usr/lib64/perl5/CORE" UUID.c
+UUID.xs:5:23: error: uuid/uuid.h: No such file or directory
+&lt;snip&gt;
+UUID.xs:30: warning: unused variable ‘str’
+make: *** [UUID.o] Error 1
+LZAP/UUID-0.05.tar.gz
+/usr/bin/make -- NOT OK
+Running make test
+
+Can't test without successful make
+
+Running make install
+Make had returned bad status, install seems impossible
+Failed during this command:
+LZAP/UUID-0.05.tar.gz : make NO</pre>
+<p>In order to fix this crap, you'll need to install yet another library:</p>
+<pre>libuuid-devel</pre>
+<p>Resources:</p>
+<p><a href="https://pay.reddit.com/r/perl/comments/qw34z/problems_installing_uuid/">https://pay.reddit.com/r/perl/comments/qw34z/problems_installing_uuid/</a></p>
+<p><a href="http://blog.erben.sk/2013/01/28/installing-vsphere-cli-on-centos-6/">http://blog.erben.sk/2013/01/28/installing-vsphere-cli-on-centos-6/</a></p>

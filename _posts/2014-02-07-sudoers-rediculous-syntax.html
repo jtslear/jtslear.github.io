@@ -1,0 +1,54 @@
+---
+layout: post
+title: Sudoers Rediculous Syntax
+date: 2014-02-07 19:54:44.000000000 -07:00
+type: post
+published: true
+status: publish
+categories: []
+tags:
+- linux
+- sudo
+- visudo
+meta:
+  _edit_last: '19750133'
+  _publicize_pending: '1'
+  publicize_google_plus_url: https://plus.google.com/112288796262389970964/posts/Y8sjBw2TNee
+  publicize_linkedin_url: http://www.linkedin.com/updates?discuss=&scope=35280723&stype=M&topic=5837719916329209856&type=U&a=Bs7b
+  _wpas_done_5858344: '1'
+  _publicize_done_external: a:1:{s:11:"google_plus";a:1:{s:21:"112288796262389970964";b:1;}}
+  _wpas_done_1386473: '1'
+  _oembed_aad0f64799c2b62ba647caad31e45365: "{{unknown}}"
+  _oembed_9fd3be591de8e41c3183445667a0aeb7: "{{unknown}}"
+  _oembed_c5b5437e22ad9f269769e89a645b408a: "{{unknown}}"
+  _oembed_4909b841bd8d3b27dcc81b49eeea5be3: "{{unknown}}"
+  _oembed_9bb0bec351e3fe1a11ce8f2da1185c8d: "{{unknown}}"
+author:
+  login: jskarbek
+  email: jtslear@gmail.com
+  display_name: jskarbek
+  first_name: ''
+  last_name: ''
+---
+<p>I came across something that threw me for a loop today.  I needed to modify sudoers so that I can help secure a service account to execute a script as a different user.  So here's my config that was dropped in /etc/sudoers.d/somefile</p>
+<pre>Cmd_Alias THISCOMMAND = /path/to/the/script
+serviceaccount ALL = (otheruser) NOPASSWD: THISCOMMAND
+Defaults!THISCOMMAND !requiretty</pre>
+<p>Nothing out of the ordinary, but when validating the command, sudo fails with an error message:</p>
+<pre>[root@hostname ~]# sudo -l -U serviceaccount
+sudo: &gt;&gt;&gt; /etc/sudoers.d/somefile: syntax error near line 3 &lt;&lt;&lt;
+sudo: parse error in /etc/sudoers.d/somefile near line 3
+sudo: no valid sudoers sources found, quitting
+sudo: unable to initialize policy plugin</pre>
+<p>Checking and rechecking the man page and sudo documentation lead me no where.  I even moved this config information into visudo, which worked fine.  So I KNOW my syntax is correct.  Long story short, <strong>sudo is expecting a new line in the file</strong>.  After throwing a new line in the config, all is well.  Here's the diff:</p>
+<pre>@@ -1,3 +1,3 @@
+ Cmnd_Alias THISCOMMAND = /path/to/the/script
+serviceaccount ALL = (otheruser) NOPASSWD: THISCOMMAND
+-Defaults!THISCOMMAND !requiretty
+\ No newline at end of file
++Defaults!THISCOMMAND !requiretty</pre>
+<p>After that, validating sudo returned what I expected it too.</p>
+<p>I'm not the only person that has seen this either:</p>
+<ul>
+<li><a href="https://groups.google.com/forum/#!topic/puppet-users/nGKutJ9Iw2E">groups.google.com...puppet-users/nGKutJ9Iw2E</a></li>
+</ul>

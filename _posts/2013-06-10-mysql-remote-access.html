@@ -1,0 +1,30 @@
+---
+layout: post
+title: mysql Remote Access
+date: 2013-06-10 15:28:25.000000000 -06:00
+type: post
+published: true
+status: publish
+categories: []
+tags:
+- linkedin
+- mysql
+meta:
+  _edit_last: '19750133'
+  _wpas_done_1386473: '1'
+  _publicize_done_external: a:1:{s:8:"linkedin";a:1:{s:10:"Wf9JSr6aRc";b:1;}}
+author:
+  login: jskarbek
+  email: jtslear@gmail.com
+  display_name: jskarbek
+  first_name: ''
+  last_name: ''
+---
+<p>So, I don't do this often enough, but when I do, I forget how to do it EVERYTIME.  The below allows a specific user access to a specific database from a remote connection.</p>
+<pre>
+UPDATE db SET host='FQDN' WHERE db='database_name';
+UPDATE user SET host='FQDN' WHERE user='user_name';
+FLUSH PRIVILEGES;
+GRANT ALL PRIVILEGES ON database_name.* TO 'user_name'@'FQDN' IDENTIFIED BY 'the_password';
+</pre>
+<p>FQDN refers to the server that is making the connection to the database server.</p>
