@@ -25,6 +25,9 @@ menu:
     url: '/categories'
     type: 'categories'
 
+google_analytics: UA-76728902-1
+google_verify: 9b0m_ywEEgPiB-gSntxHrObtq8qSV5mhY1pRAea-HfE
+
 owner:
   name:           John T Skarbek
   site:           http://jtslear.github.io
