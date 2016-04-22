@@ -65,6 +65,7 @@ exclude: [
   "log",
   "node_modules",
   "package.json",
+  "vendor",
 ]
 
 gems:
