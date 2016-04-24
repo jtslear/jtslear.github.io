@@ -26,6 +26,24 @@ task :build do
   Jekyll::Commands::Build.process(profile: true)
 end
 
+task :serve do
+  Rake::Task['clean'].invoke
+  puts 'Building site...'.yellow.bold
+  sh "cp _config.yml _config_dev.yml"
+  sh "sed -i -dev -e 's/^url:/#url:/' _config_dev.yml"
+  sh "jekyll build --config _config_dev.yml"
+  puts 'Begining to serve site...'.yellow.bold
+  begin
+    sh "jekyll serve --config _config_dev.yml"
+  rescue SystemExit, Interrupt
+    sh "rm -rf _config_dev.yml"
+    sh "rm -rf _config_dev.yml-dev"
+    exit 0
+  rescue Exception => e
+    puts e
+  end
+end
+
 task :clean do
   puts 'Cleaning up _site...'.yellow.bold
   Jekyll::Commands::Clean.process({})

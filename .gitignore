@@ -5,3 +5,5 @@ Gemfile.lock
 _site
 codekit-config.json
 node_modules
+_config_dev.yml
+_config_dev.yml-dev
