@@ -30,7 +30,7 @@ task :serve do
   Rake::Task['clean'].invoke
   puts 'Building site...'.yellow.bold
   sh "cp _config.yml _config_dev.yml"
-  sh "sed -i -dev -e 's/^url:/#url:/' _config_dev.yml"
+  sh "sed -i -e 's/^url:/#url:/' _config_dev.yml"
   sh "jekyll build --config _config_dev.yml"
   puts 'Begining to serve site...'.yellow.bold
   begin
