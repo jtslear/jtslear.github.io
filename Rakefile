@@ -57,7 +57,8 @@ task :html_proofer do
     './_site',
     allow_hash_href: true,
     url_ignore: [host_regex],
-    file_ignore: ['^vendor/.*']
+    file_ignore: ['^vendor/.*'],
+    only_4xx: true
   ).run
 end
 
