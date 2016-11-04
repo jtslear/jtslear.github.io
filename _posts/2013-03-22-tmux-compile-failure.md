@@ -80,4 +80,3 @@ Resources:
 
 * [Tmux at SourceForge](https://tmux.github.io/)
 * [libevent](http://libevent.org/)
-* [libevent-2.0.so.5: cannot open shared object file: No such file or directory](http://www.nigeldunn.com/2011/12/11/libevent-2-0-so-5-cannot-open-shared-object-file-no-such-file-or-directory/)

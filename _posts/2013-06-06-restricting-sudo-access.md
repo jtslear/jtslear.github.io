@@ -63,7 +63,6 @@ visudo is very powerful and if not done properly it can break sudo or provide un
 
 * [sudo...sudoers](http://www.sudo.ws/sudoers.man.html)
 * [serverfault...how-to-disable-sudoer-from-editing-etc-sudoers-file](http://serverfault.com/questions/308198/how-to-disable-sudoer-from-editing-etc-sudoers-file)
-* [nixcraft...sudo-exclude-commands-disable-sudo-su-bash-shell](http://nixcraft.com/networking-firewalls-security/15132-sudo-exclude-commands-disable-sudo-su-bash-shell.html)
 
 ### Side Bar:
 A sudoer still has the capability to compile or rpm a different shell.  From which gets around this entire setup.  Darn.
