@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Reading and using the latest and greatest of technology is what I want to be doing.
   Blogging is not something I do on any regular basis (and it shows).
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://jtslear.github.io" # the base hostname & protocol for your site
+url: "https://jtslear.github.io" # the base hostname & protocol for your site
 twitter_username: johntskarbek
 github_username:  jtslear
 
@@ -16,7 +16,7 @@ menu:
   - title: 'Home'
     url: '/'
   - title: 'Github'
-    url: 'http://github.com/jtslear'
+    url: 'https://github.com/jtslear'
   - title: 'About'
     url: '/about/'
   - title: 'Tags'
@@ -31,7 +31,7 @@ disqus_shortname: jtslear-github-io
 
 owner:
   name:           John T Skarbek
-  site:           http://jtslear.github.io
+  site:           https://jtslear.github.io
   avatar:         images/avatar.jpg
   bio: >
     Im an Infrastructure Engineer at CA Technologies in the Agile Business Unit.
@@ -68,5 +68,5 @@ exclude: [
   "vendor",
 ]
 
-gems:
+plugins:
   - jekyll-paginate
